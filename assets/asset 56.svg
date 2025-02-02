@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.087" height="33.377" viewBox="0 0 34.087 33.377">
+  <g id="prev_arrow_white" opacity="0.68">
+    <g id="Ellipse_82" data-name="Ellipse 82" transform="translate(0 0)" fill="none" stroke="#fff" stroke-width="2">
+      <ellipse cx="17.043" cy="16.688" rx="17.043" ry="16.688" stroke="none"/>
+      <ellipse cx="17.043" cy="16.688" rx="16.043" ry="15.688" fill="none"/>
+    </g>
+    <path id="Icon_metro-arrow-right" data-name="Icon metro-arrow-right" d="M8.536,14.715,4.722,10.9a.763.763,0,0,1,0-1.079L8.536,6.008A.763.763,0,0,1,9.615,7.086L7.1,9.6h7.312a.763.763,0,0,1,0,1.526H7.1l2.512,2.512a.763.763,0,1,1-1.079,1.079Z" transform="translate(7.565 6.3)" fill="#fff"/>
+  </g>
+</svg>
