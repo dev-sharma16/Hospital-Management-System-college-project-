@@ -39,6 +39,7 @@ nav {
   height: 40px;
   width: 500px;
   margin-left: 250px;
+  padding-left: 15px;
   /* margin-right: 10px; */
   /* border: none; */
   border-color: #d0d0d0;
@@ -53,6 +54,9 @@ nav {
   justify-content: center;
   align-items: center;
   border-radius: 6px;
+}
+#searchIcon:hover{
+  background-color: #0a6a84;
 }
 .cntNo {
   display: flex;
@@ -71,26 +75,42 @@ nav {
   border-radius: 11px;
   font-weight: 450;
   font-size: 15px;
-  
 }
-.no1 a{
-    color: var(--accent-color);
+/* .no1 a {
+  color: var(--accent-color);
+
+} */
+.no1:hover {
+  background-color: var(--accent-color);
+  color: white;
+  border: 2px solid rgb(255, 155, 127);
 }
-.langSel{
-    height: 25px;
-    background-color: var(--accent-color);
-    padding: 9px;
-    border-radius: 11px;
-    margin-left: 20px;
-    
+/* .no1 i{
+color: #007c9d;
+} */
+/* .no1 i:hover {
+  color: rgb(255, 155, 127);
+} */
+.no1 p {
+  cursor: pointer;
 }
-.langSel a{
-    color: #ffffff;
+.langSel {
+  height: 25px;
+  background-color: var(--accent-color);
+  padding: 9px;
+  border-radius: 11px;
+  margin-left: 20px;
+}
+.langSel a {
+  color: #ffffff;
 }
 
 .bttm {
   display: flex;
   justify-content: space-evenly;
+}
+.navLinks:hover {
+  color: var(--accent-color);
 }
 
 /* main banner */
@@ -126,6 +146,10 @@ nav {
   font-size: 13px;
   font-weight: 500;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+.box:hover {
+  background-color: #02556cc4;
+  color: white;
 }
 
 /* specialitiesSection */
@@ -173,6 +197,15 @@ nav {
   height: 170px;
   width: 200px;
   font-size: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
 }
 .box2 img {
   height: 90px;
@@ -181,6 +214,12 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+.category :hover {
+  border: 1px solid rgb(255, 155, 127);
+}
+.category a :hover {
+  border: 0px;
 }
 
 /* likeToDoToday */
@@ -210,6 +249,10 @@ nav {
   font-size: 13px;
   font-weight: 500;
   /* box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25); */
+}
+.todayBoxes :hover {
+  background-color: #02556cc4;
+  color: white;
 }
 .box3 img {
   height: 50px;
@@ -249,6 +292,9 @@ footer {
 .emgNo a {
   color: #007c9d;
 }
+.emgNo a:hover {
+  text-decoration: underline;
+}
 .patientCare {
   display: flex;
   flex-direction: column;
@@ -266,6 +312,9 @@ footer {
   color: #ffffff8b;
   font-size: 13px;
 }
+.patientCare a:hover {
+  color: rgb(255, 202, 188);
+}
 .medicalProcedure {
   display: flex;
   flex-direction: column;
@@ -282,6 +331,9 @@ footer {
   color: #ffffff8b;
   font-size: 13px;
 }
+.medicalProcedure a:hover {
+  color: rgb(255, 202, 188);
+}
 .contactUs {
   display: flex;
   flex-direction: column;
@@ -297,6 +349,9 @@ footer {
 .contactUs a {
   color: #ffffff8b;
   font-size: 13px;
+}
+.contactUs a:hover {
+  color: rgb(255, 202, 188);
 }
 .copyRight {
   height: 50px;
