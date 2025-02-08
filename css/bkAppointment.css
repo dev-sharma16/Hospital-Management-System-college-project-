@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* utility classes */
+:root {
+  --primary-text-color: #000000;
+  --secondary-text-color: #536c83;
+  --accent-color: #007c9d;
+  --accent-color-dark: #0d6efd;
+  --padding-inline-section: 20px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+}
+a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+/* nav bar */
+nav {
+  height: 100px;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  padding-top: 15px;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.uppr {
+  display: flex;
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+#hospitalIcon img {
+  height: 60px;
+  margin-left: 90px;
+  /* margin-top: 10px; */
+}
+#searchBar {
+  height: 40px;
+  width: 500px;
+  margin-left: 250px;
+  padding-left: 15px;
+  /* margin-right: 10px; */
+  /* border: none; */
+  border-color: #d0d0d0;
+  border-radius: 6px;
+  box-shadow: none;
+}
+#searchIcon {
+  background-color: var(--accent-color);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+#searchIcon:hover {
+  background-color: #0a6a84;
+}
+.cntNo {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  margin-left: 10px;
+  /* background-color: #7e6f6f; */
+  height: 40px;
+  width: 280px;
+  justify-content: space-evenly;
+}
+.no1 {
+  /* height: 40px; */
+  border: 2px solid var(--accent-color);
+  padding: 7px;
+  border-radius: 11px;
+  font-weight: 450;
+  font-size: 15px;
+}
+/* .no1 a {
+  color: var(--accent-color);
+
+} */
+.no1:hover {
+  background-color: var(--accent-color);
+  color: white;
+  border: 2px solid rgb(255, 155, 127);
+}
+/* .no1 i{
+color: #007c9d;
+} */
+/* .no1 i:hover {
+  color: rgb(255, 155, 127);
+} */
+.no1 p {
+  cursor: pointer;
+}
+.langSel {
+  height: 25px;
+  background-color: var(--accent-color);
+  padding: 9px;
+  border-radius: 11px;
+  margin-left: 20px;
+}
+.langSel a {
+  color: #ffffff;
+}
+
+.bttm {
+  display: flex;
+  justify-content: space-evenly;
+}
+.navLinks:hover {
+  color: var(--accent-color);
+}
+
+/* main section */
+main {
+  padding-top: 110px;
+  width: 100%;
+}
+.doctors {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: #9e6161; */
+}
+.doctor-card {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 800px;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0px 5px 10px rgba(4, 146, 185, 0.3);
+}
+
+.left-section img {
+  /* width: 220px; */
+  height: 225px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.right-section {
+  flex: 1;
+  padding: 0 20px;
+  position: relative;
+}
+.right-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.right-section p {
+  margin-top: 10px;
+}
+.deg{
+    font-weight: 600;
+}
+.days{
+    margin-bottom: 6px;
+}
+.time{
+    margin-bottom: 6px;
+}
+.right-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 1.5px;
+  height: 100%;
+  background-color: #007b9d8c;
+}
+.speciality {
+  color: #009688;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.appointment-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 180px;
+}
+
+.days {
+  color: #009688;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.time {
+  font-size: 14px;
+  color: #555;
+}
+
+.appointment-btn {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.appointment-btn:hover {
+  background: #e64a19;
+}
