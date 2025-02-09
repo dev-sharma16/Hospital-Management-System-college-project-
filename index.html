@@ -62,12 +62,43 @@
           <a href="pages/bkAppointment.html" target="_blank"><img src="assets/asset 5.svg" alt="" /></a>Find Doctor
         </div>
         <div class="box">
-          <a href="#"><img src="assets/asset 6.svg" alt="" /></a>Find Hospital
+          <a href="pages/bkAppointment.html"><img src="assets/asset 6.svg" alt="" /></a>Find Hospital
         </div>
+
         <div class="box">
-          <a href="#"><img src="assets/asset 7.svg" alt="" /></a>Book Health
-          Check-up
+          <a href="#" id="openFormBtn"><img src="assets/asset 7.svg" alt="" /></a>Book Test
         </div>
+        <div id="overlay"></div>
+        <div id="bookingFormContainer">
+          <div class="booking-form">
+              <span id="closeFormBtn">&times;</span>
+              <h2>Fill details for Booking</h2>
+              <form id="bookingForm">
+                  <label for="name">Full Name:</label>
+                  <input type="text" id="name" required>
+  
+                  <label for="age">Age:</label>
+                  <input type="number" id="age" required>
+  
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" required>
+  
+                  <label for="testType">Select Test:</label>
+                  <select id="testType" required>
+                      <option value="">Choose a test</option>
+                      <option value="Blood Test">Blood Test</option>
+                      <option value="X-Ray">X-Ray</option>
+                      <option value="MRI Scan">MRI Scan</option>
+                      <option value="ECG">ECG</option>
+                  </select>
+  
+                  <button type="submit">Book Now</button>
+              </form>
+              <p id="confirmationMessage"></p>
+          </div>
+      </div>
+
+
         <div class="box">
           <a href="#"><img src="assets/asset 8.svg" alt="" /></a>Consult Online
         </div>
@@ -189,5 +220,6 @@
     <div class="copyRight">
         <p>© Copyright 2025. XYZ Hospitals . All Rights Reserved.</p>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
