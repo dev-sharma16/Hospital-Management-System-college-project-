@@ -30,7 +30,7 @@ nav {
   height: 100px;
   padding-top: 15px;
   z-index: 0;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .uppr {
   display: flex;
@@ -62,7 +62,7 @@ nav {
   align-items: center;
   border-radius: 6px;
 }
-#searchIcon:hover{
+#searchIcon:hover {
   background-color: #0a6a84;
 }
 .cntNo {
@@ -121,7 +121,7 @@ color: #007c9d;
 }
 
 /* main banner */
-main{
+main {
   padding-top: 100px;
 }
 .mainBanner {
@@ -129,7 +129,6 @@ main{
   height: 465px;
   width: 100%;
   overflow: hidden;
-  
 }
 .mainBanner img {
   width: 100%;
@@ -160,8 +159,13 @@ main{
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
 }
 .box:hover {
-  background-color: #02556cc4;
-  color: white;
+  /* background-color: #02556cc4; */
+  color: rgb(255, 89, 0);
+  border: 1.5px solid rgb(255, 89, 0);
+  box-shadow: 10px 10px 30px rgba(255, 89, 0, 0.114);
+}
+.box:active {
+  background-color: var(--accent-color);
 }
 /* helathCheckup form */
 #overlay {
@@ -170,8 +174,8 @@ main{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  display: none; /* Hidden initially */
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
   z-index: 1;
 }
 #bookingFormContainer {
@@ -183,9 +187,9 @@ main{
   padding: 20px 40px;
   background: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(100%); /* Initially hidden */
+  transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
-  z-index: 2; /* Above overlay */
+  z-index: 2;
 }
 #bookingFormContainer.show {
   transform: translateX(0);
@@ -212,7 +216,8 @@ label {
   text-align: left;
   font-size: 19px;
 }
-input, select {
+.booking-form input,
+select {
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -235,7 +240,7 @@ button:hover {
 }
 #confirmationMessage {
   margin-top: 20px;
-  color:  rgb(255, 84, 37);
+  color: rgb(255, 84, 37);
   font-weight: 600;
   font-size: 18px;
 }
@@ -304,10 +309,15 @@ button:hover {
   justify-content: space-evenly;
 }
 .category :hover {
-  border: 1px solid rgb(255, 155, 127);
+  border: 1.5px solid rgb(255, 89, 0);
+  box-shadow: 10px 10px 30px rgba(255, 89, 0, 0.114);
 }
 .category a :hover {
   border: 0px;
+  box-shadow: 0px 0px 0px rgba(255, 89, 0, 0);
+}
+.box2:active{
+  background-color: var(--accent-color);
 }
 
 /* likeToDoToday */
@@ -330,17 +340,14 @@ button:hover {
   display: flex;
   flex-direction: column;
   height: 145px;
-  width: 170px;
+  width: 200px;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
   font-size: 13px;
   font-weight: 500;
+  /* border: 0px; */
   /* box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25); */
-}
-.todayBoxes :hover {
-  background-color: #02556cc4;
-  color: white;
 }
 .box3 img {
   height: 50px;
@@ -353,6 +360,15 @@ button:hover {
   width: 85%;
   height: 200px;
 }
+.box3:hover {
+  color: rgb(255, 89, 0);
+  border: 2px solid rgb(255, 89, 0);
+  box-shadow: 10px 10px 30px rgba(255, 89, 0, 0.114);
+}
+.box3:active{
+  background-color: var(--accent-color);
+}
+
 
 /* Footer */
 footer {

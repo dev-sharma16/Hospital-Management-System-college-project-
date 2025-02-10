@@ -1,14 +1,24 @@
 const openFormBtn = document.getElementById("openFormBtn");
+const openFormBtnEnd = document.getElementById("openFormBtnEnd");
 const closeFormBtn = document.getElementById("closeFormBtn");
 const bookingFormContainer = document.getElementById("bookingFormContainer");
 const overlay = document.getElementById("overlay");
 const bookingForm = document.getElementById("bookingForm");
 const confirmationMessage = document.getElementById("confirmationMessage");
 
-openFormBtn.addEventListener("click", function () {
+// openFormBtn.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   bookingFormContainer.classList.add("show");
+//   overlay.classList.add("show");
+// });
+function openBookingForm(event) {
+  event.preventDefault(); 
   bookingFormContainer.classList.add("show");
   overlay.classList.add("show");
-});
+}
+
+openFormBtn.addEventListener("click", openBookingForm);
+openFormBtnEnd.addEventListener("click", openBookingForm);
 
 closeFormBtn.addEventListener("click", function () {
   bookingFormContainer.classList.remove("show");
