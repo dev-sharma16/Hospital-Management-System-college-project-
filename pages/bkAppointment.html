@@ -63,6 +63,29 @@
     </header>
 
     <main>
+      <div class="mainContainer">
+      <div class="filter">
+        <p>Filter :</p>
+      <select  id="categoryFilter">
+        <option value="" selected disabled>Speciality</option>
+        <option value="Internal Medicine">Internal Medicine</option>
+        <option value="Cardiologist">Cardiologist</option>
+        <option value="Neurologist">Neurologist</option>
+        <option value="Gastroenterologist">Gastroenterologist</option>
+        <option value="Orthopedician">Orthopedician</option>
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="Plastic Surgeon">Plastic Surgeon</option>
+        <option value="Opthalmologist">Opthalmologist</option>
+        <option value="Radiologist">Radiologist</option>
+        <option value="Vascular Surgeon">Vascular Surgeon</option>
+      </select>
+      <select  id="genderFilter">
+        <option value="" selected disabled>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <button id="clearFilter">Clear Filter</button>
+    </div>
       <div class="doctors">
         <!-- <div class="doctor-card"> -->
         <!-- <div class="left-section">
@@ -82,6 +105,7 @@
                 <button class="appointment-btn">BOOK AN APPOINTMENT</button>
             </div> -->
       </div>
+    </div>
     </main>
     <script src="../docData/docData.js"></script>
     <script src="../scripts/bkAppointment.js"></script>
