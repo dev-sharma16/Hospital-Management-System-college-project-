@@ -8,15 +8,18 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mqIndex.css">
     <title>Hospital Main page</title>
   </head>
   <body>
     <header>
       <nav>
         <div class="uppr">
+          <div class="icon-srchBar">
           <a href="index.html" id="hospitalIcon"
             ><img src="assets/asset 46.svg" alt=""
           /></a>
+          <div class="srchBr">
           <input
             type="text"
             id="searchBar"
@@ -28,6 +31,9 @@
               style="color: #ffffff"
               ></i
               ></a>
+            </div>
+            </div>
+            <div class="cnt-langBtn">
               <div class="cntNo">
                   <div class="no1"><p><i class="fa-solid fa-phone" style="color: #007c9d;"></i> 16XX</p></div>
                   <div class="no1"><p><i class="fa-solid fa-phone" style="color: #007c9d;"></i> 1860-500-XXX</p></div>
@@ -35,6 +41,7 @@
                 <div class="langSel">
                     <a href="">English <i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></a>
                 </div>
+              </div>
         </div>
         <div class="bttm">
           <a href="#" class="navLinks"
@@ -55,19 +62,19 @@
       </div>
 
       <div class="featureSection">
-        <div class="box">
-          <a href="pages/bkAppointment.html"><img src="assets/asset 4.svg" alt="" /></a>Book Apointment
-        </div>
-        <div class="box">
-          <a href="pages/bkAppointment.html"><img src="assets/asset 5.svg" alt="" /></a>Find Doctor
-        </div>
-        <div class="box">
-          <a href="#"><img src="assets/View Health Record.svg" alt="" /></a>View Healthcard
-        </div>
+        <a href="pages/bkAppointment.html"><div class="box">
+          <img src="assets/asset 4.svg" alt="" />Book Apointment
+        </div></a>
+        <a href="pages/bkAppointment.html"><div class="box">
+          <img src="assets/asset 5.svg" alt="" />Find Doctor
+        </div></a>
+        <a href="#"><div class="box">
+          <img src="assets/View Health Record.svg" alt="" />View Healthcard
+        </div></a>
 
-        <div class="box">
-          <a href="#" id="openFormBtn"><img src="assets/asset 7.svg" alt="" /></a>Book Test
-        </div>
+        <a href="#" id="openFormBtn"><div class="box">
+          <img src="assets/asset 7.svg" alt="" />Book Test
+        </div></a>
         <div id="overlay"></div>
         <div id="bookingFormContainer">
           <div class="booking-form">
@@ -99,31 +106,29 @@
       </div>
 
 
-        <div class="box">
-          <a href="#"><img src="assets/asset 8.svg" alt="" /></a>Consult Online
-        </div>
-        <div class="box">
-          <a href="#"><img src="assets/asset 9.svg" alt="" /></a>Buy Medicine
-        </div>
+      <a href="#"><div class="box">
+          <img src="assets/asset 8.svg" alt="" />Consult Online
+        </div></a>
+        <a href="#"><div class="box">
+          <img src="assets/asset 9.svg" alt="" />Buy Medicine
+        </div></a>
       </div>
 
       <div class="specialitiesSection">
         <div class="specText">
           <h2>Explore our Centres of Clinical Excellence</h2>
           <p>
-            Apollo Hospitals has dedicated Centres of Excellence for several key
+            XYZ Hospitals has dedicated Centres of Excellence for several key
             specialties and super specialties. They are unique and state of the
             art facilities spread across several of the Apollo hospital
             locations and each Centre of Excellence stands out as a citadel of
             world class clinical outcomes.
           </p>
-          <p></p>
-
           <p>Learn about the world class health care we provide</p>
         </div>
         <div class="imgCat">
           <div class="docImg"><img src="assets/explore.jpg" alt="" /></div>
-       <div class="category">
+         <div class="category">
             <a href="#" class=" box2"
               ><img src="assets/asset 10.svg" alt="" />Cardiology</a
             >
@@ -158,27 +163,26 @@
       <div class="likeToDoToday">
         <div class="txt"><p>What Would You Like Do Today?</p></div>
         <div class="todayBoxes">
-          <div class="box3">
-            <a href="pages/bkAppointment.html"><img src="assets/asset 4.svg" alt="" /></a>Book
+          <a href="pages/bkAppointment.html"><div class="box3">
+            <img src="assets/asset 4.svg" alt="" />Book
             Apointment
-          </div>
-          <div class="box3">
-            <a href="pages/bkAppointment.html"><img src="assets/asset 5.svg" alt="" /></a>Find Doctor
-          </div>
+          </div></a>
+          <a href="pages/bkAppointment.html"> <div class="box3">
+            <img src="assets/asset 5.svg" alt="" />Find Doctor
+          </div></a>
           <!-- <div class="box3">
             <a href="#"><img src="assets/asset 6.svg" alt="" /></a>Find Hospital
           </div> -->
-          <div class="box3">
-            <a href="#"  id="openFormBtnEnd"><img src="assets/asset 7.svg" alt="" /></a>Book Test
-          </div>
-          <div class="box3">
-            <a href="#"><img src="assets/asset 8.svg" alt="" /></a>Consult
+          <a href="#"  id="openFormBtnEnd"><div class="box3">
+            <img src="assets/asset 7.svg" alt="" />Book Test
+          </div></a>
+          <a href="#"> <div class="box3">
+            <img src="assets/asset 8.svg" alt="" />Consult
             Online
-          </div>
-          <div class="box3">
-            <a href="#"><img src="assets/View Health Record.svg" alt="" /></a
-            >View Health Record
-          </div>
+          </div></a>
+          <a href="#"><div class="box3">
+            <img src="assets/View Health Record.svg" alt="" />View Health Record
+          </div></a>
         </div>
       </div>
     </main>

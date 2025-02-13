@@ -21,11 +21,15 @@ a {
   color: var(--primary-text-color);
 }
 
+
 /* nav bar */
 nav {
   height: 100px;
   background-color: #ffffff;
   position: fixed;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
   width: 100%;
   height: 100px;
   padding-top: 15px;
@@ -34,18 +38,34 @@ nav {
 }
 .uppr {
   display: flex;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
   align-items: center;
+  
 }
+.icon-srchBar{
+  width: 45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #0000001f; */
+}
+/* #hospitalIcon{
+  /* background-color: #0d6dfd19; */
+/* } * */
 #hospitalIcon img {
-  height: 60px;
-  margin-left: 90px;
+  height: 4rem;
+  /* margin-left: 90px; */
   /* margin-top: 10px; */
 }
+.srchBr{
+  display: flex;
+  /* background-color: #000000; */
+  
+}
 #searchBar {
-  height: 40px;
-  width: 500px;
-  margin-left: 250px;
+  height: 2.4rem;
+  width: 30rem;
+  /* margin-left: 250px; */
   padding-left: 15px;
   /* margin-right: 10px; */
   /* border: none; */
@@ -65,18 +85,27 @@ nav {
 #searchIcon:hover {
   background-color: #0a6a84;
 }
+.cnt-langBtn{
+  display: flex;
+  /* background-color: #0000002b; */
+  /* justify-content: space-between; */
+  width: 25rem;
+  gap: 2rem;
+}
 .cntNo {
   display: flex;
   align-items: center;
-  padding-left: 15px;
-  margin-left: 10px;
+  /* padding-left: 15px; */
+  /* margin-left: 10px; */
   /* background-color: #7e6f6f; */
-  height: 40px;
-  width: 280px;
+  height: 2.5rem;
+  gap: .7rem;
+  width: 15rem;
   justify-content: space-evenly;
 }
 .no1 {
   /* height: 40px; */
+
   border: 2px solid var(--accent-color);
   padding: 7px;
   border-radius: 11px;
@@ -102,11 +131,11 @@ color: #007c9d;
   cursor: pointer;
 }
 .langSel {
-  height: 25px;
+  height: 1.5rem;
   background-color: var(--accent-color);
   padding: 9px;
   border-radius: 11px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 .langSel a {
   color: #ffffff;
@@ -120,15 +149,19 @@ color: #007c9d;
   color: var(--accent-color);
 }
 
+
+
 /* main banner */
 main {
   padding-top: 100px;
+  width: 100vw;
 }
 .mainBanner {
   /* margin-top: 50px; */
-  height: 465px;
   width: 100%;
+  height:auto;
   overflow: hidden;
+  /* background-color: #214c75; */
 }
 .mainBanner img {
   width: 100%;
@@ -139,6 +172,7 @@ main {
   background-color: #d3d3d31a;
   margin-top: 0px;
   display: flex;
+  flex-wrap: wrap;
   height: 200px;
   justify-content: space-evenly;
   align-items: center;
@@ -247,50 +281,54 @@ button:hover {
 /* specialitiesSection */
 .specialitiesSection {
   background-color: #d3d3d31a;
-  height: 800px;
+  /* background-color: #007b9d2f; */
+  height: auto;
   width: 100%;
-  padding-top: 35px;
+  padding-top: .6rem;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
 }
 .specText {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 2rem;
 }
 .specText h2 {
-  font-size: 35px;
-  margin-bottom: 12px;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 .specText p {
   color: var(--secondary-text-color);
-  margin-bottom: 7px;
+  margin-bottom: .3rem;
   font-size: 18px;
 }
 .imgCat {
   display: flex;
   width: 86%;
-  height: 600px;
-  /* background-color: #d3d3d31a; */
-  padding: 20px 40px 20px 40px;
+  height: 35rem;
+  /* background-color: #710f0f1a; */
+  padding: 20px 40px ;
 }
 .docImg img {
-  height: 540px;
+  height: 34rem;
   border-radius: 15px;
   margin-right: 20px;
 }
 .box2 {
-  height: 170px;
-  width: 200px;
-  font-size: 15px;
+  height: 10.5rem;
+  width: 13rem;
+  font-size: 1rem;
   background-color: #ffffff;
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   border-radius: 15px;
   border: 0;
@@ -300,7 +338,7 @@ button:hover {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
 }
 .box2 img {
-  height: 90px;
+  height: 5rem;
 }
 .category {
   display: flex;
@@ -325,12 +363,12 @@ button:hover {
   flex-direction: column;
   align-items: center;
   background-color: var(--accent-color);
-  height: 290px;
+  height: 17rem;
   width: 100%;
-  padding-top: 45px;
+  padding-top: 2rem;
 }
 .txt {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
 }
@@ -371,7 +409,7 @@ button:hover {
 
 /* Footer */
 footer {
-  height: 350px;
+  height: 20rem;
   display: flex;
   background-color: #060822;
   justify-content: space-evenly;
@@ -382,13 +420,13 @@ footer {
 .emgNo {
   display: flex;
   flex-direction: column;
-  /* background-color: #f3eaea; */
-  height: 105px;
+  /* background-color: #f3eaea25; */
+  height: 7rem;
 
   justify-content: space-evenly;
 }
 .emgNo h4 {
-  margin-bottom: 10px;
+  margin-bottom: .4rem;
   text-decoration: underline;
   color: #ffffff;
 }
@@ -401,19 +439,19 @@ footer {
 .patientCare {
   display: flex;
   flex-direction: column;
-  /* background-color: #f3eaea; */
-  height: 184px;
+  /* background-color: #f3eaea15; */
+  height: 12rem;
 
   justify-content: space-evenly;
 }
 .patientCare h4 {
-  margin-bottom: 10px;
+  margin-bottom: .4rem;
   text-decoration: underline;
   color: #ffffff;
 }
 .patientCare a {
   color: #ffffff8b;
-  font-size: 13px;
+  font-size: .8rem;
 }
 .patientCare a:hover {
   color: rgb(255, 202, 188);
@@ -421,18 +459,18 @@ footer {
 .medicalProcedure {
   display: flex;
   flex-direction: column;
-  height: 300px;
-  /* background-color: #f3eaea; */
+  height: 19rem;
+  /* background-color: #f3eaea15; */
   justify-content: space-evenly;
 }
 .medicalProcedure h4 {
-  margin-bottom: 10px;
+  margin-bottom: .4rem;
   text-decoration: underline;
   color: #ffffff;
 }
 .medicalProcedure a {
   color: #ffffff8b;
-  font-size: 13px;
+  font-size: .8rem;
 }
 .medicalProcedure a:hover {
   color: rgb(255, 202, 188);
@@ -440,18 +478,18 @@ footer {
 .contactUs {
   display: flex;
   flex-direction: column;
-  /* background-color: #f3eaea; */
+  /* background-color: #f3eaea17; */
   justify-content: space-evenly;
-  height: 180px;
+  height: 11rem;
 }
 .contactUs h4 {
-  margin-bottom: 10px;
+  margin-bottom: .4rem;
   text-decoration: underline;
   color: #ffffff;
 }
 .contactUs a {
   color: #ffffff8b;
-  font-size: 13px;
+  font-size: .8rem;
 }
 .contactUs a:hover {
   color: rgb(255, 202, 188);
@@ -465,3 +503,4 @@ footer {
   align-items: center;
   font-weight: 300;
 }
+
