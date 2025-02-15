@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   onLoad();
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenuBtn = document.getElementById("closeMenuBtn");
+  const overlay2 = document.getElementById("overlay2");
+
+hamburgerBtn.addEventListener("click",function(){
+  mobileMenu.style.right="0";
+  overlay2.style.display="block";
+});
+
+closeMenuBtn.addEventListener("click",function(){
+  mobileMenu.style.right="-70%";
+  overlay2.style.display="none"
+});
+
+overlay2.addEventListener("click",function(){
+  mobileMenu.style.right="-70%";
+  overlay2.style.display="none"
+});
 });
 
 const categoryFilter = document.getElementById("categoryFilter");
