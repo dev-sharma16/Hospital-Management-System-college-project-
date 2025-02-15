@@ -43,7 +43,7 @@ nav {
   
 }
 .icon-srchBar{
-  width: 45rem;
+  width: 58rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +62,12 @@ nav {
   /* background-color: #000000; */
   
 }
+/* .srchBr input{
+  border: 1px solid #007c9d ;
+  back
+} */
 #searchBar {
+  /* background-color: #000000; */
   height: 2.4rem;
   width: 30rem;
   /* margin-left: 250px; */
@@ -70,8 +75,10 @@ nav {
   /* margin-right: 10px; */
   /* border: none; */
   border-color: #d0d0d0;
-  border-radius: 6px;
+  border: 1px solid #007c9d ;
+  border-radius: 6px 0px 0px 6px;
   box-shadow: none;
+  
 }
 #searchIcon {
   background-color: var(--accent-color);
@@ -80,7 +87,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 0px 6px 6px 0px;
+
 }
 #searchIcon:hover {
   background-color: #0a6a84;
@@ -135,7 +143,7 @@ color: #007c9d;
   background-color: var(--accent-color);
   padding: 9px;
   border-radius: 11px;
-  /* margin-left: 20px; */
+  margin-left: 2rem;
 }
 .langSel a {
   color: #ffffff;
@@ -149,12 +157,69 @@ color: #007c9d;
   color: var(--accent-color);
 }
 
+/* hamburger menu */
+.secondaryNav{
+  display: none;
+}
+#hamburgerBtn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+}
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -70%; 
+  width: 70%;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: right 0.4s ease-in-out;
+  z-index: 1001;
+}
+#closeMenuBtn {
+  font-size: 30px;
+  cursor: pointer;
+  color: red;
+  align-self: flex-end;
+  margin: 10px;
+}
+#overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+#mobileMenu ul {
+  list-style: none;
+  padding: 0;
+}
+#mobileMenu ul li {
+  margin: 20px 0;
+}
+#mobileMenu ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
 
 
 /* main banner */
 main {
   padding-top: 100px;
   width: 100vw;
+  
 }
 .mainBanner {
   /* margin-top: 50px; */
@@ -362,6 +427,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
   background-color: var(--accent-color);
   height: 17rem;
   width: 100%;
@@ -404,6 +470,9 @@ button:hover {
 }
 .box3:active{
   background-color: var(--accent-color);
+}
+.bottom-buttons {
+  display: none;
 }
 
 
@@ -478,6 +547,7 @@ footer {
 .contactUs {
   display: flex;
   flex-direction: column;
+
   /* background-color: #f3eaea17; */
   justify-content: space-evenly;
   height: 11rem;
