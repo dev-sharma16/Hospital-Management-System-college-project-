@@ -1,5 +1,30 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // hamburger menu
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenuBtn = document.getElementById("closeMenuBtn");
+  const overlay2 = document.getElementById("overlay2");
+
+hamburgerBtn.addEventListener("click",function(){
+  mobileMenu.style.right="0";
+  overlay2.style.display="block";
+});
+
+closeMenuBtn.addEventListener("click",function(){
+  mobileMenu.style.right="-70%";
+  overlay2.style.display="none"
+});
+
+overlay2.addEventListener("click",function(){
+  mobileMenu.style.right="-70%";
+  overlay2.style.display="none"
+})
+
+
+// booking form
 const openFormBtn = document.getElementById("openFormBtn");
 const openFormBtnEnd = document.getElementById("openFormBtnEnd");
+const openFormMobile = document.getElementById("openFormMobile")
 const closeFormBtn = document.getElementById("closeFormBtn");
 const bookingFormContainer = document.getElementById("bookingFormContainer");
 const overlay = document.getElementById("overlay");
@@ -19,6 +44,7 @@ function openBookingForm(event) {
 
 openFormBtn.addEventListener("click", openBookingForm);
 openFormBtnEnd.addEventListener("click", openBookingForm);
+openFormMobile.addEventListener("click",openBookingForm);
 
 closeFormBtn.addEventListener("click", function () {
   bookingFormContainer.classList.remove("show");
@@ -51,4 +77,5 @@ bookingForm.addEventListener("submit", function (event) {
   } else {
     confirmationMessage.textContent = "Please fill in all fields.";
   }
+});
 });
