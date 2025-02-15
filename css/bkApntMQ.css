@@ -1,0 +1,284 @@
+@media (max-width: 768px) {
+  /* Navigation */
+  nav {
+    height: auto;
+    /* padding: 10px; */
+  }
+  .icon-srchBar {
+    padding-left: 4rem;
+    /* background-color: antiquewhite; */
+  }
+  .uppr {
+    flex-direction: column;
+    align-items: center;
+
+    /* justify-content: space-evenly; */
+  }
+  .srchBr {
+    width: 100%;
+    /* background-color: #000000; */
+    align-items: center;
+    justify-content: center;
+    margin-right: 7rem;
+    /* padding-left:10px */
+  }
+  #hospitalIcon img {
+    margin-left: 5rem;
+    height: 3rem;
+    padding: 0;
+  }
+  #searchBar {
+    width: 75%;
+    margin: 10px 0;
+
+    /* background-color: #000000; */
+  }
+  .cnt-langBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 80px; */
+    /* background-color: #0000003a; */
+    width: 100%;
+  }
+  .cntNo {
+    width: auto;
+    gap: 2rem;
+    font-size: 5px;
+  }
+  .no1 p {
+    font-size: 0.7rem;
+  }
+  .langSel {
+    font-size: 0.7rem;
+    height: 1rem;
+  }
+  /* main */
+  main {
+    padding-top: 8.5rem;
+  }
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .filter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    height: 6vh;
+  }
+  .filter select {
+    font-size: 12px;
+  }
+  #clearFilter {
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  .doctors {
+    width: 85vw;
+    margin-left: 2.5rem;
+  }
+  .doctor-card {
+    width: 80vw;
+    height: 35vh;
+    /* margin-left: 20px; */
+  }
+  .doctor-card p {
+    font-size: 10px;
+  }
+  .appointment-section {
+    width: 20vw;
+  }
+  .appointment-section p {
+    font-size: 17px;
+  }
+  .appointment-btn {
+    font-size: 12px;
+  }
+}
+
+/* for mobile */
+
+@media (max-width: 425px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* Navigation */
+
+  .cnt-langBtn {
+    display: none;
+  }
+  .uppr {
+    display: none;
+  }
+  .bttm {
+    display: none;
+  }
+  /* second nav */
+  #srchBox2 {
+    height: 2rem;
+  }
+
+  .secondaryNav {
+    display: block;
+    width: 100%;
+    /* background-color: rgba(171, 255, 227, 0.256); */
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    margin-top: 0;
+    z-index: 1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+    /* width: 75vw; */
+    /* height: rem */
+    /* gap: 2rem; */
+  }
+  #hamburgerBtn {
+    display: block;
+    /* background-color: #cfacac; */
+    /* height: 1rem; */
+  }
+  #hamburgerBtn i {
+    height: 1rem;
+    margin-right: 0.8rem;
+  }
+  #hspIcon img {
+    height: 2.9rem;
+    margin-left: 0.8rem;
+    /* background-color: black; */
+  }
+  #srchBox {
+    /* background-color: #cfacac; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin-left: 1.2rem;
+  }
+  #srchBox input {
+    margin-left: 0.3rem;
+    width: 80%;
+    height: 22px;
+    border-radius: 8px 0px 0px 8px;
+    border: 1px solid #007c9d;
+    /* border: 1px solid black; */
+  }
+  #searchIcon2 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: .2rem; */
+    background-color: #007c9d;
+    border-radius: 0px 8px 8px 0px;
+  }
+  #srchBox2 {
+    height: 1.5rem;
+    padding: 0.5rem;
+    width: 5rem;
+  }
+
+  /* main */
+  main {
+    padding-top: 75px;
+    /* padding-left: 70px; */
+    width: 100%;
+    height: 100%;
+    /* background-color: #eba580; */
+  }
+  .mainContainer {
+    margin: 0px;
+    padding: 0px;
+    margin-left: -21px; /**/
+  }
+  .selection {
+    flex-direction: row;
+  }
+  .filter {
+    margin-top: 20px;
+    width: 88vw;
+    flex-direction: column;
+    height: 13vh;
+    margin-bottom: 20px;
+    padding-right: 18px;
+    /* margin-left: 0px; */
+  }
+  .filter select {
+    font-size: 12px;
+  }
+  .filter p {
+    font-size: 18px;
+    display: block;
+  }
+  #clearFilter {
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: #dadada52;
+
+  }
+  #clearFilter {
+    font-size: 12px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 8px;
+  }
+  .doctors {
+    width: 90vw;
+    height: fit-content;
+  }
+  .doctor-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 75vw;
+  }
+  .right-section {
+    padding: 0px 0px;
+  }
+  .right-section p {
+    font-size: 14px;
+  }
+  .right-section::after {
+    display: none;
+  }
+  .days {
+    margin-bottom: 6px;
+    width: 30vw;
+    margin-left: -20px;
+  }
+  .time {
+    margin-bottom: 10px;
+    width: 30vw;
+    /* background-color: #007c9d; */
+    margin-left: -20px;
+  }
+  .appointment-section {
+    margin-top: 10px;
+  }
+  .appointment-btn {
+    width: 45vw;
+    height: 6vh;
+    margin-left: -50px;
+  }
+}
