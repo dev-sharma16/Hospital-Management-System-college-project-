@@ -104,6 +104,49 @@
   .appointment-btn {
     font-size: 12px;
   }
+
+  /* appointment page */
+  #appointmentPage {
+    width: 60%;
+  }
+  .doctor-info {
+    font-size: 12px;
+  }
+  #closeBtn {
+    font-size: 20px;
+  }
+  .doctor-info img {
+    width: 80px;
+    height: 80px;
+  }
+  .date-selector,
+  .time-selector {
+    margin-top: 20px;
+    padding: 0px 10px;
+  }
+  .dates-container,
+  .time-slots {
+    padding: 8px;
+  }
+  .dates-container div,
+  .time-slots div {
+    padding: 8px;
+    font-size: 13px;
+  }
+  #userForm {
+    margin: 1px;
+  }
+  #userForm input {
+    height: 6vh;
+    width: 13vw;
+    margin-left: 8px;
+    font-size: 12px;
+  }
+  #submitBtn{
+    height: 6vh;
+    width: 10vw;
+    font-size: 15px;
+  }
 }
 
 /* for mobile */
@@ -232,7 +275,6 @@
     margin-left: 0px;
     margin-top: 0px;
     background-color: #dadada52;
-
   }
   #clearFilter {
     font-size: 12px;
@@ -280,5 +322,39 @@
     width: 45vw;
     height: 6vh;
     margin-left: -50px;
+  }
+
+   /* appointment page */
+   #appointmentPage {
+    right: -50%;
+    width: 75%;
+  }
+  .doctor-info {
+    font-size: 12px;
+  }
+  #closeBtn {
+    font-size: 20px;
+    
+  }
+  
+  #userForm {
+    margin: 1px;
+    align-items: center;
+  }
+  
+  #userForm input {
+    height: 6vh;
+    width: 60vw;
+    display: block;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  #submitBtn{
+    height: 6vh;
+    width: 20vw;
+    font-size: 16px;
+    margin-left: 24vw;
+    
   }
 }
