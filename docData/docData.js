@@ -10,6 +10,7 @@ const doctorData = [
     description:
       "Dr Jaganmani Sreekanth is an experienced Interventional based in Hyderabad. Dr Jaganmani Sreekanth graduated from MBBS",
       appntTime:"(12:00 - 13:15)",
+      availableTimes:["12:00","12:15","12:30","12:45","13:00","13:15"],
       gender :"male"
   },
 
@@ -24,6 +25,7 @@ const doctorData = [
     description:
       "Dr Kalpana Janardan is an experienced Interventional Internal Medicine based in Bangalore. Dr Kalpana Janardan graduated from MBBS,MD(American Board Certified in Gen ",
       appntTime:"(11:00 - 15:00)",
+      availableTimes:["11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00"],
       gender :"female"
   },
   
@@ -38,6 +40,7 @@ const doctorData = [
     description:
       "Dr S N Pathak is an experienced Interventional based in Delhi. Dr S N Pathak graduated from MBBS, MD(Medicine), DM (Cardiology)",
       appntTime:"(10:00 - 15:00)",
+      availableTimes:["10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00"],
       gender :"male"
 
   },
@@ -53,6 +56,7 @@ const doctorData = [
     description:
       "Dr Sarita Rao is an experienced Interventional Cardiologist based in Indore. Dr Sarita Rao graduated from MBBS; DM Cardiology ",
       appntTime:"(10:00 - 15:00)",
+      availableTimes:["10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00"],
       gender :"female"
 
   },
@@ -68,6 +72,7 @@ const doctorData = [
     description:
       "Dr Avinash Gupta is an experienced Interventional based in Bilaspur. Dr Avinash Gupta graduated from MBBS,DNB(MED),DNB(NEUROLOGY)",
       appntTime:"(10:00 - 16:00)",
+      availableTimes:["10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00"],
       gender :"male"
 
   },
@@ -83,6 +88,7 @@ const doctorData = [
     description:
       "Dr Rashmi Devaraj is an experienced Interventional based in Bilaspur. Dr Avinash Gupta graduated from MBBS,DNB(MED),DNB(NEUROLOGY)",
       appntTime:"(09:00 - 20:00)",
+      availableTimes:["09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00","17:15","17:30","17:45","18:00","18:15","18:30","18:45","19:00","19:15","19:30","19:45","20:00"],
       gender :"female"
 
   },
@@ -98,6 +104,7 @@ const doctorData = [
     description:
       "Dr Amit Gharat is an experienced Interventional based in Mumbai. Dr Amit Gharat graduated from MBBS, MD, DNB",
       appntTime:"(13:30 - 16:30)",
+      availableTimes:["13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30"],
       gender :"male"
 
   },
@@ -112,6 +119,7 @@ const doctorData = [
     description:
       "Dr P Hima Bindhu is an experienced Interventional based in Mumbai. Dr Amit Gharat graduated from MBBS, MD, DNB",
       appntTime:"(09:00 - 17:00)",
+      availableTimes:["09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00"],
       gender :"female"
 
   },
@@ -127,6 +135,7 @@ const doctorData = [
     description:
       "Dr S R K Dikshith is an experienced Interventional based in Hyderabad. Dr S R K Dikshith graduated from MS .Ortho ( gold medalist) , DNB . Ortho, FIJR Fellow in Advanced Arthroscopy",
       appntTime:"(10:30 - 15:30)",
+      availableTimes:["10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30"],
       gender :"male"
 
   },
@@ -141,6 +150,7 @@ const doctorData = [
     description:
       "Dr S Madhuri is an experienced Interventional based in Hyderabad. Dr S Madhuri graduated from MBBS, MD DVL, DNB DVL, FELLOW IN DERMATOSURGERY AND LASERS",
       appntTime:"(14:00 - 16:00)",
+      availableTimes:["14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00"],
       gender :"female"
 
   },
@@ -155,6 +165,7 @@ const doctorData = [
     description:
       "Dr Pragati Jain is an experienced Interventional based in Hyderabad. Dr S Madhuri graduated from MBBS, MD DVL, DNB DVL, FELLOW IN DERMATOSURGERY AND LASERS",
       appntTime:"(10:00 - 16:00)",
+      availableTimes:["10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00"],
       gender :"female"
 
   },
@@ -170,6 +181,7 @@ const doctorData = [
     description:
       "Dr Rajib Paul is an experienced Interventional based in Hyderabad. Dr Rajib Paul graduated from MBBS; MD (General Medicine)",
       appntTime:"(12:30 - 14:15)",
+      availableTimes:["12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15"],
       gender :"male"
 
   },
@@ -184,6 +196,7 @@ const doctorData = [
     description:
       "Dr Pramati Reddy is an experienced Interventional based in Hyderabad. Dr Rajib Paul graduated from MBBS; MD (General Medicine)",
       appntTime:"(10:00 - 12:15)",
+      availableTimes:["10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15"],
       gender :"female"
 
   },
@@ -199,6 +212,7 @@ const doctorData = [
     description:
       "Dr Sripriya Sankar is an experienced Interventional based in Chennai. Dr Sripriya Sankar graduated from MBBS, Diploma in Ophthalmology (DO), FRCS (Glasg)",
       appntTime:"(11:00 - 12:00)",
+      availableTimes:["11:00","11:15","11:30","11:45","12:00"],
       gender :"female"
 
   },
@@ -213,6 +227,7 @@ const doctorData = [
     description:
       "Dr Siddharth Shukla is an experienced Interventional based in Chennai. Dr Sripriya Sankar graduated from MBBS, Diploma in Ophthalmology (DO), FRCS (Glasg)",
       appntTime:"(09:00 - 17:30)",
+      availableTimes:["09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00","17:30"],
       gender :"male"
 
   },
@@ -228,6 +243,7 @@ const doctorData = [
     description:
       "Dr Rashmi Sudhir is an experienced Interventional based in Hyderabad. Dr Rashmi Sudhir graduated from MBBS(CMC,Vellore)",
       appntTime:"(10:00 - 16:00)",
+      availableTimes:["12:00","12:15","12:30","12:45","13:00","13:15"],
       gender :"female"
 
   },
@@ -242,6 +258,7 @@ const doctorData = [
     description:
       "Dr Savith Kumar is an experienced Interventional based in Hyderabad. Dr Rashmi Sudhir graduated from MBBS(CMC,Vellore)",
       appntTime:"(08:00 - 17:00)",
+      availableTimes:["08:00","08:15","08:30","08:45","09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00"],
       gender :"male"
 
   },
@@ -257,6 +274,7 @@ const doctorData = [
     description:
       "Dr Jaisom Chopra is an experienced Interventional based in Delhi. Dr Jaisom Chopra graduated from BSc, MBBS, MS, FRCS(Edin)",
       appntTime:"(10:00 - 17:00)",
+      availableTimes:["10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00","16:15","16:30","16:45","17:00"],
       gender :"male"
 
   },
@@ -271,6 +289,7 @@ const doctorData = [
     description:
       "Dr Nikhila Pinjala is an experienced Interventional based in Delhi. Dr Jaisom Chopra graduated from BSc, MBBS, MS, FRCS(Edin)",
       appntTime:"(09:00 - 16:00)",
+      availableTimes:["09:00","09:15","09:30","09:45","10:00","10:15","10:30","10:45","11:00","11:15","11:30","11:45","12:00","12:15","12:30","12:45","13:00","13:15","13:30","13:45","14:00","14:15","14:30","14:45","15:00","15:15","15:30","15:45","16:00"],
       gender :"female"
 
   },

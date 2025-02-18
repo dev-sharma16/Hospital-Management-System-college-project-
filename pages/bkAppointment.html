@@ -8,15 +8,18 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/bkAppointment.css" />
+    <link rel="stylesheet" href="../css/bkApntMQ.css">
     <title>Doctors in Hospital</title>
   </head>
   <body>
     <header>
       <nav>
         <div class="uppr">
-          <a href="../index.html" id="hospitalIcon"
+          <div class="icon-srchBar">
+          <a href="/index.html" id="hospitalIcon"
             ><img src="../assets/asset 46.svg" alt=""
           /></a>
+          <div class="srchBr">
           <input
             type="text"
             id="searchBar"
@@ -26,27 +29,19 @@
             ><i
               class="fa-sharp fa-solid fa-magnifying-glass"
               style="color: #ffffff"
-            ></i
-          ></a>
-          <div class="cntNo">
-            <div class="no1">
-              <p>
-                <i class="fa-solid fa-phone" style="color: #007c9d"></i> 16XX
-              </p>
+              ></i
+              ></a>
             </div>
-            <div class="no1">
-              <p>
-                <i class="fa-solid fa-phone" style="color: #007c9d"></i>
-                1860-500-XXX
-              </p>
             </div>
-          </div>
-          <div class="langSel">
-            <a href=""
-              >English
-              <i class="fa-solid fa-chevron-down" style="color: #ffffff"></i
-            ></a>
-          </div>
+            <div class="cnt-langBtn">
+              <div class="cntNo">
+                  <div class="no1"><p><i class="fa-solid fa-phone" style="color: #007c9d;"></i> 16XX</p></div>
+                  <div class="no1"><p><i class="fa-solid fa-phone" style="color: #007c9d;"></i> 1860-500-XXX</p></div>
+                </div>
+                <div class="langSel">
+                    <a href="">English <i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></a>
+                </div>
+              </div>
         </div>
         <div class="bttm">
           <a href="#" class="navLinks"
@@ -59,14 +54,43 @@
             >Contact Us <i class="fa-solid fa-caret-down"></i
           ></a>
         </div>
+
+        <div class="secondaryNav">
+            <div id="hspIcon">
+             <a href="../index.html" 
+             ><img src="../assets/asset 46.svg" alt=""
+             /></a>
+            </div>
+            <div id="srchBox">
+             <input type="text" placeholder="Search for Doctor.." id="srchBox2">
+             <a href="#" id="searchIcon2"><i
+              class="fa-sharp fa-solid fa-magnifying-glass"
+              style="color: #ffffff"
+              ></i>
+             </a>
+            </div>
+            <div id="hamburgerBtn">
+             <i class="fas fa-bars"></i> 
+            </div>
+            <div id="mobileMenu">
+              <div id="closeMenuBtn">&times;</div>
+             <ul>
+               <li><a href="#">Patient Care</a></li>
+               <li><a href="#">Health Information</a></li>
+               <li><a href="#">Contact Us</a></li>
+             </ul>
+           </div>
+           <div id="overlay2"></div>
+         </div>
       </nav>
     </header>
 
     <main>
       <div class="mainContainer">
-      <div class="filter">
-        <p>Filter :</p>
-      <select  id="categoryFilter">
+        <div class="filter">
+          <p>Filter :</p>
+         <div class="selection">
+         <select  id="categoryFilter">
         <option value="" selected disabled>Speciality</option>
         <option value="Internal Medicine">Internal Medicine</option>
         <option value="Cardiologist">Cardiologist</option>
@@ -78,15 +102,16 @@
         <option value="Opthalmologist">Opthalmologist</option>
         <option value="Radiologist">Radiologist</option>
         <option value="Vascular Surgeon">Vascular Surgeon</option>
-      </select>
-      <select  id="genderFilter">
+         </select>
+         <select  id="genderFilter">
         <option value="" selected disabled>Gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
-      </select>
-      <button id="clearFilter">Clear Filter</button>
-    </div>
-      <div class="doctors">
+         </select>
+         <button id="clearFilter">Clear Filter</button>
+        </div>
+      </div>
+        <div class="doctors">
         <!-- <div class="doctor-card"> -->
         <!-- <div class="left-section">
                 <img src="../assets/doc-female-new.png" alt="Dr Jaganmani Sreekanth">
@@ -104,8 +129,34 @@
                 <p class="time">(12:00 - 13:15)</p>
                 <button class="appointment-btn">BOOK AN APPOINTMENT</button>
             </div> -->
-      </div>
-    </div>
+        </div>
+      
+
+        <div id="overlay3"></div>
+        <div id="appointmentPage">
+            <button id="closeBtn">✖</button>
+            <div class="doctor-info">
+                <img id="docImage" src="" alt="Doctor">
+                <h2 id="docName"></h2>
+                <p id="docCat"></p>
+            </div>
+            <div class="date-selector">
+                <h3>Select Date</h3>
+                <div class="dates-container"></div>
+            </div>
+            <div class="time-selector">
+                <h3>Select Time</h3>
+                <div class="time-slots"></div>
+            </div>
+            <div id="userForm" class="hidden">
+                <h3>Enter Your Details</h3>
+                <input type="text" id="userName" placeholder="Enter your name">
+                <input type="tel" id="userPhone" placeholder="Enter mobile number">
+                <button id="submitBtn">Submit</button>
+            </div>
+            <div id="appointmentConfirmation" ></div>
+        </div>
+      
     </main>
     <script src="../docData/docData.js"></script>
     <script src="../scripts/bkAppointment.js"></script>
