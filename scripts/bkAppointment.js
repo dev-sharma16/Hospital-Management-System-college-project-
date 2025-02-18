@@ -22,6 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   appointmentPage.style.right = "-100%";
   overlay3.style.display = "none";
+  
+  // logic for specialites section
+  const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get("category");
+
+    if (selectedCategory) {
+       
+        // document.getElementById("categoryFilter").value = selectedCategory;
+        const filteredDoctors = doctorData.filter(
+          (doc) => doc.category === selectedCategory
+        );
+        displayDoctors(filteredDoctors);
+    }
+        
+
 });
 
 const categoryFilter = document.getElementById("categoryFilter");
