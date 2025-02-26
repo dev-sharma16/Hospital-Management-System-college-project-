@@ -38,7 +38,7 @@ nav {
 }
 .uppr {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   
 }
@@ -54,7 +54,7 @@ nav {
 /* } * */
 #hospitalIcon img {
   height: 4rem;
-  /* margin-left: 90px; */
+  margin-left: 64%;
   /* margin-top: 10px; */
 }
 .srchBr{
@@ -99,6 +99,7 @@ nav {
   /* justify-content: space-between; */
   width: 25rem;
   gap: 2rem;
+  margin-right: 3%;
 }
 .cntNo {
   display: flex;
