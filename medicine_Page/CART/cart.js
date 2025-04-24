@@ -47,30 +47,30 @@ function removeFromBag(itemId){
 }
 
 // 👇 html from products
-  function generateItemHtml(item){
-    return `<div class="bag-item-container">
-                <div class="item-left-part">
-                  <img class="bag-item-img" src="../../assets/assetsSlider/${item.image}">
+function generateItemHtml(item){
+  return `<div class="bag-item-container">
+              <div class="item-left-part">
+                <img class="bag-item-img" src="../../assets/assetsSlider/${item.image}">
+              </div>
+              <div class="item-right-part">
+                <div class="company">${item.name}</div>
+                <div class="price-container">
+                  <span class="current-price">Rs ${item.price}</span>
+                  <span class="original-price">Rs ${item.mrp}</span>
+                  <span class="discount-percentage">(${item.discount})</span>
                 </div>
-                <div class="item-right-part">
-                  <div class="company">${item.name}</div>
-                  <div class="price-container">
-                    <span class="current-price">Rs ${item.price}</span>
-                    <span class="original-price">Rs ${item.mrp}</span>
-                    <span class="discount-percentage">(${item.discount})</span>
-                  </div>
-                  <div class="return-period">
-                    <span class="return-period-days">${item.return_period} days</span> return available
-                  </div>
-                  <div class="delivery-details">
-                    Delivery by
-                    <span class="delivery-details-days">${item.delivery_date}</span>
-                  </div>
+                <div class="return-period">
+                  <span class="return-period-days">${item.return_period} days</span> return available
                 </div>
-    
-              <div class="remove-from-cart" onclick="removeFromBag(${item.id})">X</div>
-              </div> `;
-  }
+                <div class="delivery-details">
+                  Delivery by
+                  <span class="delivery-details-days">${item.delivery_date}</span>
+                </div>
+              </div>
+  
+            <div class="remove-from-cart" onclick="removeFromBag(${item.id})">X</div>
+            </div> `;
+}
 
 
 // 👇 this whole function will lode the bag summary
@@ -114,10 +114,10 @@ function displayBagSummary(){
                   <span class="price-item-value">Rs${totalPayment}</span>
                 </div>
               </div>
-              <button class="btn-place-order">
-                <div class="css-xjhrni">PLACE ORDER</div>
+              <button class="btn-place-order" onclick="window.location.href='../Checkout/checkout.html'">
+                <div class="css-xjhrni">CHECKOUT</div>
               </button>`
-  }
+}
   
 
 
