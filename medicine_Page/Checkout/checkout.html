@@ -1,0 +1,33 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+
+  <h2>Checkout</h2>
+
+  <form id="checkout-form">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <textarea name="address" placeholder="Full Address" required></textarea>
+    <input type="text" name="pincode" placeholder="Pincode" required />
+    <input type="text" name="state" placeholder="State" required />
+
+    <label for="payment">Payment Option:</label>
+    <select name="payment" id="payment" required>
+      <option value="cod">Cash on Delivery</option>
+      <option value="netbanking" disabled>Net Banking (Coming Soon)</option>
+      <option value="upi" disabled>UPI (Coming Soon)</option>
+    </select>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
