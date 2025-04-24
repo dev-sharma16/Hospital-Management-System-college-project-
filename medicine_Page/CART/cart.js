@@ -17,10 +17,7 @@ function onLoad(){
 function loadBagItemsObjects(){
     console.log(bagItems);
     BagItemsObjects = bagItems.map(itemId => {
-
-        
-
-      for(i=0 ; i<=allProducts.length ; i++){
+      for(i=0 ; i<allProducts.length ; i++){
         if(itemId == allProducts[i].id){
           return allProducts[i];
         }
@@ -45,7 +42,6 @@ function removeFromBag(itemId){
   bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
   localStorage.setItem('bagItems',JSON.stringify(bagItems));
   loadBagItemsObjects();
-  displayItemCount()
   displayBagItems();
   displayBagSummary();
 }
@@ -80,21 +76,23 @@ function removeFromBag(itemId){
 // 👇 this whole function will lode the bag summary
 function displayBagSummary(){
     let bagSummaryElement = document.querySelector('.bag-summary');
+
+    if (BagItemsObjects.length === 0) {
+      bagSummaryElement.innerHTML = ''; // Clear the summary if cart is empty
+      return;
+    }
+
     let totalItem = BagItemsObjects.length;
     let totalMRP = 0;
     let totalDiscount = 0;
     
     
     BagItemsObjects.forEach(bagItem => {
-      totalMRP += bagItem.price;
-      totalDiscount += bagItem.price - bagItem.mrp;
+      totalMRP += bagItem.mrp;
+      totalDiscount += bagItem.mrp - bagItem.price;
     });
   
     let totalPayment = totalMRP - totalDiscount + CONVENIENCE_FEE;
-
-    if(BagItemsObjects == 0){
-      return;
-    }
     
     bagSummaryElement.innerHTML = ` <div class="bag-details-container">
                 <div class="price-header">PRICE DETAILS (${totalItem} Items) </div>
