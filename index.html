@@ -7,6 +7,8 @@
       src="https://kit.fontawesome.com/a3bbc2f13b.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-override.css">
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="mqIndex.css">
     <title>Hospital Main page</title>
@@ -20,7 +22,7 @@
             ><img src="assets/asset 46.svg" alt=""
           /></a>
           <div class="srchBr">
-          <input
+          <!-- <input
             type="text"
             id="searchBar"
             placeholder="Search for Doctor or Hospital"
@@ -30,6 +32,9 @@
                 class="fa-sharp fa-solid fa-magnifying-glass"
                 style="color: #ffffff"
                 ></i>
+              </a> -->
+              <a href="index.html">
+                <h1 id="hsName">City Hospital</h1>
               </a>
             </div>
             </div>
@@ -43,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="bttm">
+        <!-- <div class="bttm">
           <a href="#" class="navLinks"
             >Patient Care <i class="fa-solid fa-caret-down"></i
           ></a>
@@ -53,8 +58,9 @@
           <a href="#" class="navLinks"
             >Contact Us <i class="fa-solid fa-caret-down"></i
           ></a>
-        </div>
+        </div> -->
 
+        <!-- Second nav for mobile screen -->
         <div class="secondaryNav">
             <div id="hspIcon">
              <a href="index.html" 
@@ -62,11 +68,14 @@
              /></a>
             </div>
             <div id="srchBox">
-             <input type="text" placeholder="Search for Doctor.." id="srchBox2">
+             <!-- <input type="text" placeholder="Search for Doctor.." id="srchBox2">
              <a href="#" id="searchIcon2"><i
               class="fa-sharp fa-solid fa-magnifying-glass"
               style="color: #ffffff"
               ></i>
+             </a> -->
+             <a href="index.html">
+              <h1 id="hsName">City Hospital</h1>
              </a>
             </div>
             <div id="hamburgerBtn">
@@ -86,7 +95,37 @@
     </header>
     <main>
       <div class="mainBanner">
-        <img src="assets/LungLife_banner_Web.jpg" alt="" />
+        <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Carousel indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/bkAppointmentBanner.svg" class="d-block w-100" alt="Appointment Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/bkTestBanner.svg" class="d-block w-100" alt="Medicine Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/ecomBanner.svg" class="d-block w-100" alt="Health Checkup Banner">
+            </div>
+          </div>
+          
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
 
       <div class="featureSection">
@@ -208,7 +247,7 @@
           <a href="#"  id="openFormBtnEnd"><div class="box3">
             <img src="assets/asset 7.svg" alt="" />Book Test
           </div></a>
-          <a href="#"> <div class="box3">
+          <a href="./consultOnline/consultOnline.html"> <div class="box3">
             <img src="assets/asset 8.svg" alt="" />Consult
             Online
           </div></a>
@@ -221,8 +260,8 @@
         <!-- <a href="tel:+918069991061" class="emergency-call">
             <img src="phone-icon.png" alt="Call"> +91 8069991061
         </a> -->
-        <a href="#" id="openFormMobile" class="book-test">Book Test</a>
-        <a href="../pages/bkAppointment.html" class="book-appointment">Book Appointment</a>
+        <a href="#" id="openFormMobile" class="book-test btmBtn">Book Test</a>
+        <a href="./pages/bkAppointment.html" class="book-appointment btmBtn">Book Appointment</a>
     </div>
     </main>
     <footer>
@@ -262,6 +301,7 @@
     <div class="copyRight">
         <p>© Copyright 2025. XYZ Hospitals . All Rights Reserved.</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
