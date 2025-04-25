@@ -31,20 +31,15 @@ const overlay = document.getElementById("overlay");
 const bookingForm = document.getElementById("bookingForm");
 const confirmationMessage = document.getElementById("confirmationMessage");
 
-// openFormBtn.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   bookingFormContainer.classList.add("show");
-//   overlay.classList.add("show");
-// });
 function openBookingForm(event) {
-  event.preventDefault(); 
+  // event.preventDefault(); 
   bookingFormContainer.classList.add("show");
   overlay.classList.add("show");
 }
 
 openFormBtn.addEventListener("click", openBookingForm);
 openFormBtnEnd.addEventListener("click", openBookingForm);
-openFormMobile.addEventListener("click",openBookingForm);
+openFormMobile.addEventListener("click", openBookingForm);
 
 closeFormBtn.addEventListener("click", function () {
   bookingFormContainer.classList.remove("show");
@@ -57,25 +52,33 @@ overlay.addEventListener("click", function () {
 });
 
 bookingForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-
   let name = document.getElementById("name").value;
   let age = document.getElementById("age").value;
   let phone = document.getElementById("phone").value;
   let testType = document.getElementById("testType").value;
 
+  // Basic validation
+  if (!name || !age || !phone || !testType) {
+    event.preventDefault(); // Prevent form submission if validation fails
+    confirmationMessage.textContent = "Please fill in all fields.";
+    return false;
+  }
+  
+  // Phone number validation (optional)
+  if (phone.length < 10) {
+    event.preventDefault();
+    confirmationMessage.textContent = "Please enter a valid phone number.";
+    return false;
+  }
+
+  
   console.log("User Details:");
   console.log("Name:", name);
   console.log("Age:", age);
   console.log("Phone:", phone);
   console.log("Selected Test:", testType);
-
-  if (name && age && phone && testType) {
-    confirmationMessage.textContent = `Thank you, ${name}. Your ${testType} has been booked successfully!`;
-    bookingForm.reset();
-
-  } else {
-    confirmationMessage.textContent = "Please fill in all fields.";
-  }
+  
+  // The form will be submitted and handled by PHP
 });
+
 });

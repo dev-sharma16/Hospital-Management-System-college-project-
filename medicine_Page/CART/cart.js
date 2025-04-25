@@ -17,10 +17,7 @@ function onLoad(){
 function loadBagItemsObjects(){
     console.log(bagItems);
     BagItemsObjects = bagItems.map(itemId => {
-
-        
-
-      for(i=0 ; i<=allProducts.length ; i++){
+      for(i=0 ; i<allProducts.length ; i++){
         if(itemId == allProducts[i].id){
           return allProducts[i];
         }
@@ -45,56 +42,57 @@ function removeFromBag(itemId){
   bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
   localStorage.setItem('bagItems',JSON.stringify(bagItems));
   loadBagItemsObjects();
-  displayItemCount()
   displayBagItems();
   displayBagSummary();
 }
 
 // 👇 html from products
-  function generateItemHtml(item){
-    return `<div class="bag-item-container">
-                <div class="item-left-part">
-                  <img class="bag-item-img" src="../../assets/assetsSlider/${item.image}">
+function generateItemHtml(item){
+  return `<div class="bag-item-container">
+              <div class="item-left-part">
+                <img class="bag-item-img" src="../../assets/assetsSlider/${item.image}">
+              </div>
+              <div class="item-right-part">
+                <div class="company">${item.name}</div>
+                <div class="price-container">
+                  <span class="current-price">Rs ${item.price}</span>
+                  <span class="original-price">Rs ${item.mrp}</span>
+                  <span class="discount-percentage">(${item.discount})</span>
                 </div>
-                <div class="item-right-part">
-                  <div class="company">${item.name}</div>
-                  <div class="price-container">
-                    <span class="current-price">Rs ${item.price}</span>
-                    <span class="original-price">Rs ${item.mrp}</span>
-                    <span class="discount-percentage">(${item.discount})</span>
-                  </div>
-                  <div class="return-period">
-                    <span class="return-period-days">${item.return_period} days</span> return available
-                  </div>
-                  <div class="delivery-details">
-                    Delivery by
-                    <span class="delivery-details-days">${item.delivery_date}</span>
-                  </div>
+                <div class="return-period">
+                  <span class="return-period-days">${item.return_period} days</span> return available
                 </div>
-    
-              <div class="remove-from-cart" onclick="removeFromBag(${item.id})">X</div>
-              </div> `;
-  }
+                <div class="delivery-details">
+                  Delivery by
+                  <span class="delivery-details-days">${item.delivery_date}</span>
+                </div>
+              </div>
+  
+            <div class="remove-from-cart" onclick="removeFromBag(${item.id})">X</div>
+            </div> `;
+}
 
 
 // 👇 this whole function will lode the bag summary
 function displayBagSummary(){
     let bagSummaryElement = document.querySelector('.bag-summary');
+
+    if (BagItemsObjects.length === 0) {
+      bagSummaryElement.innerHTML = ''; // Clear the summary if cart is empty
+      return;
+    }
+
     let totalItem = BagItemsObjects.length;
     let totalMRP = 0;
     let totalDiscount = 0;
     
     
     BagItemsObjects.forEach(bagItem => {
-      totalMRP += bagItem.price;
-      totalDiscount += bagItem.price - bagItem.mrp;
+      totalMRP += bagItem.mrp;
+      totalDiscount += bagItem.mrp - bagItem.price;
     });
   
     let totalPayment = totalMRP - totalDiscount + CONVENIENCE_FEE;
-
-    if(BagItemsObjects == 0){
-      return;
-    }
     
     bagSummaryElement.innerHTML = ` <div class="bag-details-container">
                 <div class="price-header">PRICE DETAILS (${totalItem} Items) </div>
@@ -116,10 +114,10 @@ function displayBagSummary(){
                   <span class="price-item-value">Rs${totalPayment}</span>
                 </div>
               </div>
-              <button class="btn-place-order">
-                <div class="css-xjhrni">PLACE ORDER</div>
+              <button class="btn-place-order" onclick="window.location.href='../Checkout/checkout.html'">
+                <div class="css-xjhrni">CHECKOUT</div>
               </button>`
-  }
+}
   
 
 

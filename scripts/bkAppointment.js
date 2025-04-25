@@ -161,12 +161,12 @@ overlay3.addEventListener("click", function () {
 function loadDates() {
   const datesContainer = document.querySelector(".dates-container");
   datesContainer.innerHTML = "";
-  
-  let date = new Date();
-  date.setDate(date.getDate() + 1); 
+
+  let today = new Date(); // Reference date
+  let date = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1); // Start from tomorrow
 
   for (let i = 0; i < 14; i++) { 
-      if (date.getDay() === 0) { 
+      if (date.getDay() === 0) { // Skip Sundays
           date.setDate(date.getDate() + 1);
           continue;
       }
@@ -174,19 +174,36 @@ function loadDates() {
       let dateBox = document.createElement("div");
       dateBox.innerText = `${date.toLocaleString("en-US", { weekday: "short" })} ${date.getDate()}`;
       dateBox.classList.add("date-box");
-      
+
+      // Store date components separately to avoid timezone issues
+      dateBox.dataset.year = date.getFullYear();
+      dateBox.dataset.month = date.getMonth();
+      dateBox.dataset.day = date.getDate();
+
+      // // Store correct year & month using dataset
+      // dateBox.dataset.date = date.toISOString();  
+
       dateBox.onclick = function () {
-          document.querySelectorAll(".date-box").forEach(box => box.classList.remove("selected-date"));
-          dateBox.classList.add("selected-date");
-          
-          selectedDate = new Date(date);
-          loadTimes(selectedDoctor.availableTimes);
+        document.querySelectorAll(".date-box").forEach(box => box.classList.remove("selected-date"));
+        dateBox.classList.add("selected-date");
+        
+        // Reconstruct the date from components
+        selectedDate = new Date(
+            parseInt(dateBox.dataset.year),
+            parseInt(dateBox.dataset.month),
+            parseInt(dateBox.dataset.day)
+        );
+        
+        console.log("Selected Date:", selectedDate.toISOString().split('T')[0]);
+        loadTimes(selectedDoctor.availableTimes);
       };
 
       datesContainer.appendChild(dateBox);
       date.setDate(date.getDate() + 1);
   }
 }
+
+
 
 function loadTimes(timeArray) {
   const timeContainer = document.querySelector(".time-slots");
@@ -214,16 +231,59 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const userPhone = document.getElementById("userPhone").value;
 
   if (userName && userPhone) {
-      document.getElementById("appointmentConfirmation").innerHTML = `
-          <h3>Appointment Confirmed</h3>
-          <p><strong>Doctor:</strong> ${selectedDoctor.docName}</p>
-          <p><strong>Date:</strong> ${selectedDate.toDateString()}</p>
-          <p><strong>Time:</strong> ${selectedTime}</p>
-      `;
+       
+    console.log("User Appointment Details:");
+    console.log("Name:", userName);
+    console.log("Phone:", userPhone);
+    console.log("Doctor:", selectedDoctor.docName);
+    // console.log("Date:", selectedDate.toDateString());
+    console.log("Date:", selectedDate.toISOString().split('T')[0]);
+    console.log("Time:", selectedTime);
 
-      document.getElementById("appointmentConfirmation").style.display = "block";
-      document.getElementById("userForm").style.display = "none"; 
-  } else {
-      alert("Please fill in all details.");
-  }
+      // Format the date for MySQL (YYYY-MM-DD)
+      const formattedDate = (selectedDate.toISOString().split('T')[0]);
+
+       // Create data object to send
+      const appointmentData = {
+        doctors: selectedDoctor.docName,
+        date: formattedDate,
+        time: selectedTime,
+        name: userName,
+        mobile_no: userPhone
+      };
+
+
+        // Send data to PHP backend
+      fetch('../php/bookAppointment.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(appointmentData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          // Show confirmation message
+          document.getElementById("appointmentConfirmation").innerHTML = `
+            <h3>Appointment Confirmed</h3>
+            <p><strong>Doctor:</strong> ${selectedDoctor.docName}</p>
+            <p><strong>Date:</strong> ${selectedDate.toDateString()}</p>
+            <p><strong>Time:</strong> ${selectedTime}</p>
+          `;
+  
+          document.getElementById("appointmentConfirmation").style.display = "block";
+          document.getElementById("userForm").style.display = "none";
+        } else {
+          alert("Error saving appointment: " + data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert("An error occurred while saving your appointment.");
+      });
+     }
+     else {
+       alert("Please fill in all details and select a date and time.");
+     }  
 });

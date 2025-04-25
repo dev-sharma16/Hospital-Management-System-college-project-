@@ -98,8 +98,8 @@ function addProducts(carouselId, products) {
         <div class="product">
             <img src="../assets/assetsSlider/${product.image}" alt="">
             <p>${product.name}</p>
-            <span class="price">${product.price} </span>
-            <span class="mrp">${product.mrp} </span>
+            <span class="price">₹${product.price} </span>
+            <span class="mrp">₹${product.mrp} </span>
             <span class="discount"> ${product.discount} </span>
             <button class="add-btn" onclick="addToBag(${product.id})" >ADD</button>
         </div>
