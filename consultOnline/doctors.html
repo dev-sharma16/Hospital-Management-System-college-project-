@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Doctors List</title>
-  <style>
+  <!-- <style>
     #doctor-container div {
       border: 1px solid #ccc;
       border-radius: 10px;
@@ -16,24 +16,29 @@
       display: flex;
       flex-wrap: wrap;
     }
-  </style>
+  </style> -->
+  <link rel="stylesheet" href="../consultOnline/doctor.css">
 </head>
 <body>
 
-  <h2 id="heading">Doctors</h2>
+
   
+<main style="display: flex; height:20px; width:500px;">
+  <a href="../index.html" ><span>⇦</span></a>
+  <h2 id="heading">CHOOSE YOUR DOCTOR</h2>
+</main>  
 
 <script src="doctor.js"></script> 
     
     <div id="doctor-container"></div>
 
-    <div id="slideForm" style="position:fixed; top:0; right:-468px; width:400px; height:100%; background:#f9f9f9; box-shadow:-2px 0 5px rgba(0,0,0,0.2); padding:20px; transition: right 0.3s;">
+    <div id="slideForm" >
 
       <h3>Book Appointment</h3>
 
       <form id="appointmentForm" method="post" action="../php/book_appointment.php" >
 
-        Doc-ID:<input type="readonly" id="doctor_id" name="docId" style="border: none;"><br><br>
+        <span>Doc-ID:</span><input type="readonly" id="doctor_id" name="docId" ><br><br>
         <!-- Doc-Name:<input type="readonly" id="doctor_name" name="docnm" style="border: none;"><br><br> -->
 
         <label>Patient Name:</label><br>

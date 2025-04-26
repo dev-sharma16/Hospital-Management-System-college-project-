@@ -48,16 +48,27 @@
 
     doctors.forEach(doctor => {
       const docCard = document.createElement('div');
+      docCard.classList.add('doctor-card');
       docCard.innerHTML = `
-        <h3>${doctor.name}</h3>
-        <img src="${doctor.Profile_Image}" alt="${doctor.name}">
-      <p>Experience: ${doctor.experience} years</p>
-        <p>Speciality: ${doctor.speciality}</p>
-        <p>Qualification: ${doctor.qualification} years</p>
-        <p>Discription: ${doctor.discription} years</p>
-        <p>Timing: ${doctor["appnt_time_from"]} to ${doctor["appnt_time_to"]}</p>
-        <button onclick="bookCall('${doctor.Id}') ">Book Video Call</button>
-      `;
+      <div class="doctor-card-inner">
+          <div class="doctor-image">
+            <img src="${doctor.Profile_Image}" alt="${doctor.name}">
+          </div>
+        <div class="doctor-details">
+          <h3>${doctor.name}</h3>
+          <p><strong>${doctor.experience} years, ${doctor.speciality}</strong></p>
+          <p><strong>${doctor.qualification}</strong></p>
+          <p>Languages: ${doctor.languages || "English, Hindi"}</p>
+          <p>${doctor.discription}</p>
+        </div>
+        
+        <div class="doctor-appointment">
+          <p><strong>Mon - Sat</strong></p>
+          <p>(${doctor["appnt_time_from"]} - ${doctor["appnt_time_to"]})</p>
+          <button onclick="bookCall('${doctor.Id}')">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+  `;
       container.appendChild(docCard);
     });
   }
@@ -74,7 +85,7 @@ function bookCall(Id) {
 }
 
 function closeSlide() {
-  document.getElementById('slideForm').style.right = '-400px';
+  document.getElementById('slideForm').style.right = '-490px';
 }
  
 
