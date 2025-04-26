@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
 
             if ($stmt->affected_rows > 0) {
-                echo "<script>alert('Appointment booked at $assignedSlot'); window.location.href='your_redirect_page.html';</script>";
+                echo "<script>alert('Appointment booked at $assignedSlot'); window.location.href='book_appointment.php';</script>";
             } else {
                 echo "<script>alert('Error booking appointment');</script>";
             }

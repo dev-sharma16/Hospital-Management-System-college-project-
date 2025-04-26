@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Login</title>
+  <link rel="stylesheet" href="../doctorLogin_dash/Doctor_login.css">
+</head>  
+ <body>
+
+   <img src="" alt="">
+  <div class="login-container">
+    <h2>Doctor Login</h2>
+    <form method="post" action="../php/doctor_login.php">
+        <div class="form-group">
+            <label for="doctor_id">Doctor ID:</label>
+            <input type="text" id="doctor_id" name="doctor_id" required>
+        </div>
+
+        <div class="form-group">
+            <label for="doctor_password">Password:</label>
+            <input type="password" id="doctor_password" name="doctor_password" required>
+        </div>
+
+        <button type="submit" name="login_btn" class="login-btn">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
