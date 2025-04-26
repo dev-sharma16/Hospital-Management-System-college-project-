@@ -23,7 +23,7 @@
           <input
             type="text"
             id="searchBar"
-            placeholder="Search for Doctor or Hospital"
+            placeholder="Search for Doctor"
           />
           <a href="#" id="searchIcon"
             ><i
@@ -150,7 +150,13 @@
             </div>
             <div id="userForm" class="hidden">
                 <h3>Enter Your Details</h3>
-                <input type="text" id="userName" placeholder="Enter your name">
+                <input type="text" 
+                       id="userName" 
+                       placeholder="Enter your name" 
+                       pattern="[A-Za-z\s]+" 
+                       title="Only alphabets and spaces are allowed" 
+                       required
+                 >
                 <input type="tel" id="userPhone" placeholder="Enter mobile number">
                 <button id="submitBtn">Submit</button>
             </div>

@@ -1,0 +1,64 @@
+/* Override Bootstrap's default link styles */
+a {
+    text-decoration: none !important;
+    color: var(--primary-text-color) !important;
+  }
+  
+  /* Only allow Bootstrap's a styling for specific carousel controls */
+  .carousel-control-prev, 
+  .carousel-control-next,
+  .carousel-indicators [data-bs-target] {
+    color: inherit !important;
+  }
+  
+  /* Preserve your navLinks style */
+  .navLinks:hover {
+    color: var(--accent-color) !important;
+  }
+  
+  /* Restore footer link colors */
+  .patientCare a, 
+  .medicalProcedure a, 
+  .contactUs a {
+    color: #ffffff8b !important;
+    font-size: .8rem !important;
+  }
+  
+  .patientCare a:hover, 
+  .medicalProcedure a:hover, 
+  .contactUs a:hover {
+    color: rgb(255, 202, 188) !important;
+  }
+  
+  .emgNo a {
+    color: #007c9d !important;
+  }
+  
+  /* Restore login button color */
+  .langSel a {
+    color: #ffffff !important;
+  }
+  
+  /* Fix z-index issues */
+  nav {
+    z-index: 999 !important; /* Increase z-index to ensure nav appears on top */
+  }
+  
+  /* Ensure carousel doesn't break layout */
+  .mainBanner {
+    width: 100% !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+  }
+  
+  /* Fix possible spacing issues */
+  .carousel-inner {
+    width: 100% !important;
+  }
+  
+  /* Override any Bootstrap container margins if needed */
+  .container, 
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }

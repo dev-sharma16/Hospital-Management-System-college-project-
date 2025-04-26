@@ -1,0 +1,26 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="1000" height="300" fill="#007c9d" />
+  
+  <!-- Medical symbol -->
+  <g transform="translate(330, 150) scale(0.9)">
+    <!-- Heart with EKG line -->
+    <path d="M-100,20 L-70,20 L-55,0 L-40,80 L-25,0 L-10,40 L5,10 L20,30 L35,5 L50,20 L100,20" 
+          fill="none" stroke="#ffffff" stroke-width="8" />
+    <path d="M-50,-40 L-10,-40 L-10,0 C-10,30 -50,30 -50,0 Z" fill="#ffffff" />
+    <path d="M10,-40 L50,-40 L50,0 C50,30 10,30 10,0 Z" fill="#ffffff" />
+    <path d="M-10,-10 C-10,-50 50,-50 50,-10 L30,20 L0,40 L-30,20 Z" fill="rgb(255, 89, 0)" />
+  </g>
+  
+  <!-- Main text -->
+  <text x="500" y="100" font-family="Arial" font-size="40" font-weight="bold" text-anchor="middle" fill="rgb(255, 89, 0)">PREVENTION FIRST</text>
+  <text x="500" y="150" font-family="Arial" font-size="40" font-weight="bold" text-anchor="middle" fill="#ffffff">GET YOUR HEALTH CHECK-UP</text>
+  
+  <!-- Subtext -->
+  <text x="500" y="190" font-family="Arial" font-size="20" text-anchor="middle" fill="rgb(255, 89, 0)">Comprehensive health packages at special rates.</text>
+  <text x="500" y="220" font-family="Arial" font-size="18" text-anchor="middle" fill="#ffffff">India's most advanced diagnostics for early detection and prevention.</text>
+  
+  <!-- CTA button -->
+  <rect x="400" y="240" width="200" height="40" rx="5" fill="rgb(255, 89, 0)" />
+  <text x="500" y="265" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Click here to schedule</text>
+</svg>

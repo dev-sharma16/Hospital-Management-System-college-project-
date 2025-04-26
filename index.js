@@ -20,6 +20,16 @@ overlay2.addEventListener("click",function(){
   overlay2.style.display="none"
 })
 
+// Carousel
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize the carousel with options
+  var myCarousel = document.getElementById('bannerCarousel');
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 3000,  // Change slides every 3 seconds
+    wrap: true,      // Cycle continuously
+    pause: 'hover'   // Pause on mouse hover
+  });
+});
 
 // booking form
 const openFormBtn = document.getElementById("openFormBtn");

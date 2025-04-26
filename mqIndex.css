@@ -273,47 +273,49 @@
     height: 1rem;
     margin-right: 0.8rem;
   }
+  #hspIcon img {
+    height: 2.9rem;
+    margin-left: 0.8rem;
+    /* background-color: black; */
+  }
+  #srchBox {
+    /* background-color: #cfacac; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin-left: 1.2rem;
+  }
+  #srchBox input {
+    margin-left: 0.3rem;
+    width: 80%;
+    height: 22px;
+    border-radius: 8px 0px 0px 8px;
+    border: 1px solid #007c9d;
+    /* border: 1px solid black; */
+  }
+  #searchIcon2 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: .2rem; */
+    background-color: #007c9d;
+    border-radius: 0px 8px 8px 0px;
+  }
+  #srchBox2 {
+    height: 1.5rem;
+    padding: 0.5rem;
+    width: 5rem;
+  }
 }
-#hspIcon img {
-  height: 2.9rem;
-  margin-left: 0.8rem;
-  /* background-color: black; */
-}
-#srchBox {
-  /* background-color: #cfacac; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  margin-left: 1.2rem;
-}
-#srchBox input {
-  margin-left: 0.3rem;
-  width: 80%;
-  height: 22px;
-  border-radius: 8px 0px 0px 8px;
-  border: 1px solid #007c9d;
-  /* border: 1px solid black; */
-}
-#searchIcon2 {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin-left: .2rem; */
-  background-color: #007c9d;
-  border-radius: 0px 8px 8px 0px;
-}
-#srchBox2 {
-  height: 1.5rem;
-  padding: 0.5rem;
-  width: 5rem;
-}
+
 
 @media (max-width: 425px) {
   /* main section */
   main {
+    margin-top: -20px;
     padding-top: 5rem;
     width: 100%;
     background-color: rgba(16, 76, 76, 0.042);
@@ -402,7 +404,8 @@
 
   /* like for today section */
   .likeToDoToday {
-    height: 18rem;
+    height:53vh;
+    /* overflow: hidden; */
   }
   .todayBoxes {
     margin-top: 13px;
@@ -432,15 +435,15 @@
     z-index: 0;
   }
 
-  .bottom-buttons a {
+  .btmBtn{
     flex: 1;
     text-align: center;
-    padding: 12px;
+    padding: 21px;
     font-size: 14px;
     font-weight: 600;
     height: 30px;
     color: white;
-    /* font-weight: bold; */
+    font-weight: bold;
     text-decoration: none;
     display: flex;
     align-items: center;
