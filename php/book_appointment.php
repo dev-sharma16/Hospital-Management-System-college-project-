@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("127.0.0.1:3307", "root", "1234", "doctordata");
+$conn = mysqli_connect("localhost", "root", "", "doctordata");
   echo"connection done";
 
 
