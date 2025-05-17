@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$mycon=mysqli_connect("127.0.0.1:3307","root","1234","doctordata");
+$mycon=mysqli_connect("localhost","root","","doctordata");
 // echo"connection done";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

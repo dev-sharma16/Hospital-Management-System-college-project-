@@ -33,7 +33,7 @@
   const params = new URLSearchParams(window.location.search);
   const selectedSpeciality = params.get('speciality');
 
-  fetch('http://localhost/Adding_DocData/getDoctors.php')
+  fetch('../php/getDoctors.php')
     .then(res => res.json())
     .then(data => {
       allDoctors = data;
@@ -68,7 +68,7 @@
         <div class="doctor-appointment">
           <p><strong>Mon - Sat</strong></p>
           <p>(${doctor["appnt_time_from"]} - ${doctor["appnt_time_to"]})</p>
-          <button onclick="bookCall('${doctor.Id}')">BOOK AN APPOINTMENT</button>
+          <button onclick="bookCall('${doctor.Id}')">BOOK AN VIDEO CALL</button>
         </div>
       </div>
   `;
