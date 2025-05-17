@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test Send Offer</title></head>
+<body>
+<h3>Send Offer Test</h3>
+<button onclick="sendOffer()">Send Dummy Offer</button>
+
+<script>
+function sendOffer() {
+  fetch("./send_offer.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      appointment_id: 1,
+      doctor_id: 1,
+      offer: "This is a dummy SDP offer"
+    })
+  })
+  .then(res => res.text())
+  .then(msg => alert("Response: " + msg));
+}
+</script>
+</body>
+</html>

@@ -64,9 +64,14 @@ $result_appointments = mysqli_query($mycon, $sql_appointments);
                     <td><?php echo htmlspecialchars($row['patient_phonenum']); ?></td>
                     <td><?php echo htmlspecialchars($row['patient_age']); ?></td>
                     <td>
-                      <a href="video_call.php?appointment_id=<?php echo $row['id']; ?>&doctor_id=<?php echo $doctor_id; ?>">
+
+                      <!-- <a href="video_call.php?appointment_id=<?php echo $row['id']; ?>&doctor_id=<?php echo $doctor_id; ?>">
+                        <button class="video-call-btn">Start Video Call</button>
+                      </a> -->
+                      <a href="../vedioCall/doctor_call.php?appointment_id=<?php echo $row['id']; ?>&doctor_id=<?php echo $doctor_id; ?>">
                         <button class="video-call-btn">Start Video Call</button>
                       </a>
+
                     </td>
                 </tr>
             <?php endwhile; ?>
