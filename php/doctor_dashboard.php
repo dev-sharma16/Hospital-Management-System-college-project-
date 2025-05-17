@@ -9,7 +9,7 @@ if (!isset($_SESSION['doctor_logged_in']) || $_SESSION['doctor_logged_in'] !== t
 $doctor_id = $_SESSION['doctor_id'];
 // Query to fetch doctor's data (appointments, details, etc.)
 
-$mycon=mysqli_connect("127.0.0.1:3307","root","1234","doctordata");
+$mycon=mysqli_connect("localhost","root","","doctordata");
 
 // Fetch doctor’s name
 $sql_name = "SELECT name FROM docdata WHERE Id = '$doctor_id'";

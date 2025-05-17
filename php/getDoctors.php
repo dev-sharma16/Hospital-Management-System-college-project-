@@ -1,12 +1,10 @@
-
-
 <?php
 header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
 
-$servername = "127.0.0.1:3307";
+$servername = "localhost";
 $username = "root";
-$password = "1234";
+$password = "";
 $database = "doctordata";
 
 $conn = new mysqli($servername, $username, $password, $database);
