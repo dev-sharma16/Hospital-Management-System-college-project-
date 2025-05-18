@@ -15,8 +15,19 @@ $appointment_id = $aptRow['id'] ?? 0;
 $result = mysqli_query($conn, "SELECT offer FROM videocall_signals WHERE appointment_id = '$appointment_id'");
 $row = mysqli_fetch_assoc($result);
 
+// echo json_encode([
+//   'offer' => $row['offer'] ?? null,
+//   'appointment_id' => $appointment_id
+// ]);
+
+$offerJson = $row['offer'] ?? null;
+
+// Decode it if it's a JSON string, otherwise set to null
+$offerDecoded = $offerJson ? json_decode($offerJson, true) : null;
+
 echo json_encode([
-  'offer' => $row['offer'] ?? null,
+  'offer' => $offerDecoded,
   'appointment_id' => $appointment_id
 ]);
+
 ?>
