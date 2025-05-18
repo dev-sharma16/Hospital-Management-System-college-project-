@@ -139,15 +139,16 @@ function closeSlide() {
   function showPopupToAccept(offerSdp, appointmentId) {
     if (confirm("Doctor is calling you. Accept?")) {
       // Save offer in localStorage
-      localStorage.setItem("offer_sdp", offerSdp);
+      localStorage.setItem("offer_sdp", JSON.stringify(offerSdp));
       localStorage.setItem("appointment_id", appointmentId);
 
       // Open clean call page
-      // window.open("patient_call.html", "_blank");
+      // window.open("../vedioCall/patient_call.html", "_blank");
+        window.location.href = "../vedioCall/patient_call.html";
 
-      setTimeout(() => {
-        window.open("../vedioCall/patient_call.html", "_blank");
-      }, 500); // wait half a second to ensure it's stored
+      // setTimeout(() => {
+      //   window.open("../vedioCall/patient_call.html", "_blank");
+      // }, 500); // wait half a second to ensure it's stored
     }
   }
 
@@ -214,6 +215,11 @@ function startPolling(){
         console.log("Offer data received:", data);
         if (data.offer && !window.offerReceived) {
           window.offerReceived = true;
+
+        // Save offer SDP to localStorage here!
+        localStorage.setItem("offer_sdp", JSON.stringify(data.offer));
+        localStorage.setItem("appointment_id", data.appointment_id);
+
           showPopupToAccept(data.offer, data.appointment_id);
         }
       })

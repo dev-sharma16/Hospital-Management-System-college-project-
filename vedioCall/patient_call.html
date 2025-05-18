@@ -3,19 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Patient Video Call</title>
-  <style>
-    video {
-      width: 45%;
-      border: 2px solid black;
-      margin: 10px;
-    }
-  </style>
+    <style>
+      
+      body {
+        /* height:calc(100% - 100px); */
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #8ff2ff, #f9f9f9, #8ff2ff);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+      }
+    
+      h3 {
+        margin-top: 30px;
+        color: #2c3e50;
+        font-size: 28px;
+        font-weight: bold;
+      }
+    
+      .video-container {
+        background:rgba(237, 242, 243, 0.2);
+        
+        width:fit-content;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin: 20px 100px;
+        border-radius:25px  ;
+        gap: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        padding:20px;
+      }
+    
+      video {
+        
+        background: black;
+        border: 2px solid #3498db;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      #remoteVideo{
+        width: 50vw;
+        height: 35vw;
+      }
+      #localVideo{
+        width: 20vw;
+        height: 20vw;
+      }
+    
+      @media screen and (max-width: 1000px) {
+        video {
+          width: 90%;
+          height: auto;
+        }
+      }
+    </style>
 </head>
 <body>
-  <h2>Connected to Doctor</h2>
-  <div>
-    <video id="localVideo" autoplay ></video>
+  <h2></h2>
+  <div class="video-container">
     <video id="remoteVideo" autoplay></video>
+    <video id="localVideo" autoplay ></video>
   </div>
 
   <script src="patient_call.js"></script>
