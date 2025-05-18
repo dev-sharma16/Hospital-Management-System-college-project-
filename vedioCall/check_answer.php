@@ -8,7 +8,7 @@
 // echo json_encode(['answer' => $row['answer'] ?? null]);
 
 $appointment_id = $_GET['appointment_id'];
-$conn = new mysqli("localhost:3307", "root", "1234", "doctordata");
+$conn = new mysqli("localhost", "root", "", "doctordata");
 
 $sql = "SELECT answer FROM videocall_signals WHERE appointment_id = '$appointment_id'";
 $result = $conn->query($sql);

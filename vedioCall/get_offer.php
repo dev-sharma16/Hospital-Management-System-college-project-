@@ -1,5 +1,5 @@
 <?php
-  $conn = mysqli_connect("localhost:3307", "root", "1234", "doctordata");
+  $conn = mysqli_connect("localhost", "root", "", "doctordata");
   
   $appointment_id = $_GET['appointment_id'] ?? '';
   

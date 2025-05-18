@@ -1,6 +1,6 @@
 <?php
 $phone = $_GET['phone'] ?? '';
-$conn = mysqli_connect("localhost:3307", "root", "1234", "doctordata");
+$conn = mysqli_connect("localhost", "root", "", "doctordata");
 
 if (!$phone) {
     echo json_encode(["error" => "Phone number missing"]);

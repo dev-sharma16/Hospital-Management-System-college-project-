@@ -1,6 +1,6 @@
 <?php
 $data = json_decode(file_get_contents("php://input"), true);
-$conn = mysqli_connect("127.0.0.1:3307", "root", "1234", "doctordata");
+$conn = mysqli_connect("localhost", "root", "", "doctordata");
 echo"connection done";
 
 // // Remove old entries (optional)

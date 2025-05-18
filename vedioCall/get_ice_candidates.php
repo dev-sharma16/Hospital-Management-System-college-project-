@@ -10,13 +10,13 @@ if (!$appointment_id || !$role) {
 }
 
 // Connect to DB
-$mysqli = new mysqli("localhost:3307", "root", "1234", "doctordata");
+$mysqli = new mysqli("localhost", "root", "", "doctordata");
 if ($mysqli->connect_error) {
     http_response_code(500);
     echo json_encode(['candidates' => []]);
     exit;
 }
-e
+
 // We want to fetch candidates from the **other** role (because each peer fetches the other's candidates)
 $other_role = $role === 'doctor' ? 'patient' : 'doctor';
 

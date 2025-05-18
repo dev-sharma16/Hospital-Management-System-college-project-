@@ -21,7 +21,7 @@ $candidate = $data['candidate'];  // This is an associative array
 $candidate_json = json_encode($candidate);
 
 // Connect to MySQL
-$conn = new mysqli("localhost:3307", "root", "1234", "doctordata");
+$conn = new mysqli("localhost", "root", "", "doctordata");
 
 if ($conn->connect_error) {
     http_response_code(500);
